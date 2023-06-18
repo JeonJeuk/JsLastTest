@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "template",
+			"path": "../Downloads/template"
+		},
+		{
+			"name": "JsLastTest",
+			"path": "JsLastTest"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "template"
+	}
+}

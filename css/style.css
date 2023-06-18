@@ -1,0 +1,404 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+/* HTML display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    height: auto;
+    overflow-x: hidden;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.shown-area {
+    display: block;
+    opacity: 1;
+}
+
+.hidden-area {
+    display: block;
+    opacity: 0;
+}
+/* nav
+------------------------------------ */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 999;
+}
+.nav-wrapper {
+    width: 100%;
+    height: 100%;
+}
+a {
+    text-decoration: none;
+    color: white;
+    opacity: 0.7;
+    transition-duration: 1s;
+}
+#logo {
+    opacity: 1;
+}
+a:hover {
+    opacity: 1;
+    font-weight: 600;
+}
+.nav-wrapper-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+    color: white;
+    transition-duration: 1s;
+}
+.nav-right {
+    padding-left: 50px;
+}
+.nav-right ul{
+    display: flex;
+}
+.nav-right ul li {
+    padding-left: 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* ------------------------------------ */
+/* preloader
+------------------------------------ */
+.preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+}
+
+.preloader-btn {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: none;
+    color: black;
+    background-color: white;
+    margin-top: -150px;
+    margin-left: -150px;
+}
+
+.preloader-btn-hold {
+    font-size: 50px;
+    line-height: 20px;
+    font-weight: 800;
+    letter-spacing: normal;
+}
+/* ------------------------------------ */
+
+/* 스크롤에 반응하여 색깔이 이미지의 위치가 변하는 코드
+------------------------------------ */
+#intro-main {
+    display: flex;
+    flex-direction: column;
+    margin: 54px auto 140px;
+    width: 300px;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    font-weight: 500;
+    gap: 20px;
+  }
+  
+  #join-us-text {
+    margin-top: 73px;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: .6;
+  }
+  
+  #intro-main p {
+    text-align: center;
+  }
+
+  @keyframes upAndDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  #down-arrow-icon {
+    width: 33px;
+    animation: upAndDown 1s infinite;
+  }
+
+#list-item-wrapper {
+    margin: 100px auto;
+    width: 600px;
+}
+
+.list-item {
+    display: inline;
+    font-size: 72px;
+    line-height: 120%;
+    font-weight: 600;
+    color: rgb(41, 41, 41);
+}
+
+.list-item#on {
+    color: white;
+}
+
+.list-item#on::before {
+    background-image: url('../icons/light_house.png');
+}
+
+.list-item::before {
+    display: inline-block;
+    background-image: url('../icons/dark_house.png');
+    background-size: 51px 51px;
+    content: '';
+    width: 51px;
+    height: 51px;
+}
+
+#panel1-img {
+    position: relative;
+    overflow: hidden;
+}
+
+#panel1-img img {
+    position: absolute;
+    right: -80px;
+    width: 250px;
+    transform: translate(80px, -13px) rotate(23deg);
+}
+/* ------------------------------------ */
+
+
+/* 마우스 포인터 위치에 따른 오브젝트 이동
+------------------------------------ */
+.header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+.circle {
+    position: absolute;
+    display: inline-block;
+    width: 350px;
+    height: 350px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+}
+
+#circle-1 {
+    top: -100px;
+    left: -130px;
+}
+#circle-2 {
+    bottom: 5vh;
+    right: -230px;
+}
+
+.header-image {
+    position: absolute;
+    width: 15%;
+}
+
+#header-image-1 {
+    width: 10%;
+    top: 15%;
+    left: 15%;
+}
+#header-image-2 {
+    width: 10%;
+    top: 55%;
+    left: 15%;
+}
+#header-image-3 {
+    width: 6%;
+    top: 20%;
+    left: 70%;
+}
+#header-image-4 {
+    width: 10%;
+    top: 60%;
+    left: 70%;
+}
+#header-image-5 {
+    width: 5%;
+    top: 15%;
+    left: 40%;
+}
+#header-image-6 {
+    width: 10%;
+    top: 10%;
+    left: 85%;
+}
+#header-image-7 {
+    width: 10%;
+    top: 70%;
+    left: 30%;
+}
+#header-image-8 {
+    width: 5%;
+    top: 40%;
+    left: 10%;
+}
+#header-image-9 {
+    width: 5%;
+    top: 80%;
+    left: 10%;
+}
+#header-image-10 {
+    width: 5%;
+    top: 50%;
+    left: 85%;
+}
+#header-image-11 {
+    width: 5%;
+    top: 60%;
+    left: 60%;
+}
+.header-title {
+    position: absolute;
+    top: 40vh;
+    width: 100%;
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 140%;
+    color: white;
+    text-align: center;
+}
+/* ------------------------------------ */
+
+
+/* Observer를 활용한 parallax scroll
+------------------------------------ */
+.poster {
+    margin-top: 500px;
+}
+.poster-parallax {
+    position: relative;
+    height: 1500px;
+    overflow: hidden;
+}
+.poster-image {
+    position: absolute;
+    /* opacity: 0; */
+}
+.poster-image-wrapper {
+    position: absolute;
+    width: 100%;
+}
+#poster-image-wrapper-1 {
+    right: 0;
+    height: 100%;
+}
+
+#poster-image-wrapper-2 {
+    top: 10%;
+    left: 5%;
+    height: 667px;
+}
+#poster-image-wrapper-3 {
+    top: 35%;
+    right: 0;
+    height: 772px;
+}
+
+#poster-image-1 {
+    right: 0;
+    width: 1127px;
+}
+#poster-image-2 {
+    height: 100%;
+}
+#poster-image-3 {
+    right: 0;
+    height: 100%;
+}
+
+@keyframes appear-right-to-left-fast {
+    from {
+        opacity: 0;
+        transform: translate(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes apper-left-to-right {
+    from {
+        opacity: 0;
+        transform: translate(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes apper-bottom-to-top {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.poster-image-state-visible #poster-image-1 {
+    animation: appear-right-to-left-fast .75s ease;
+    animation-fill-mode: forwards;
+
+}
+.poster-image-state-visible #poster-image-2 {
+    animation: apper-left-to-right .75s ease;
+    animation-fill-mode: forwards;
+    
+}
+.poster-image-state-visible #poster-image-3 {
+    animation: apper-bottom-to-top .75s ease;
+    animation-fill-mode: forwards;
+}
+/* ------------------------------------ */
+canvas {
+    filter: url('#gooey');
+}

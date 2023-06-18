@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js" integrity="sha512-WoO4Ih0CDOSLYafy22wZD/mcJ7k0ESLqtQsFa6zFKnEUrbtuGU+GkLtVhgt93xa2qewG5gKEC6CWlN8OaCTSVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Particle</title>
+
+    <style>
+        body {
+            background-color: black;
+            height: 100vh;
+        }
+        
+        /* nav
+------------------------------------ */
+li {
+    list-style: none;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+}
+.nav-wrapper {
+    width: 100%;
+    height: 100%;
+}
+a {
+    text-decoration: none;
+    color: white;
+    opacity: 0.7;
+    transition-duration: 1s;
+}
+#logo {
+    opacity: 1;
+}
+a:hover {
+    opacity: 1;
+    font-weight: 600;
+}
+.nav-wrapper-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+    color: white;
+    transition-duration: 1s;
+}
+.nav-right {
+    padding-left: 50px;
+}
+.nav-right ul{
+    display: flex;
+}
+.nav-right ul li {
+    padding-left: 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* ------------------------------------ */
+    </style>
+</head>
+<body>
+    <nav class="nav hidden-area">
+        <div class="nav-wrapper">
+            <div class="nav-wrapper-container">
+                <div class="nav-left">
+                    <div class="logo">
+                        <h1><a id="logo" href="index.html">Interactive</a></h1>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <ul>
+                        <li><a href="particle.html">RainControl</a></li>
+                        <li><a href="http://localhost:5173/">NoiseSpace</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+         <!-- canvas particle 코드 -->
+         <canvas></canvas>
+         <svg>
+             <defs>
+                 <filter id="gooey">
+                     <feGaussianBlur stdDeviation="40" in="SourceGraphic" result="blur1"/>
+                     <feColorMatrix in="blur1" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 100 -23" />
+                 </filter>
+             </defs>
+         </svg>
+         <script src="./js/particle.js" type="module"></script>
+         <script>
+            let lastScrollTop = 0;
+const delta = 15;
+const nav = document.querySelector(".nav");
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.pageYOffset;
+
+  if (Math.abs(lastScrollTop - scrollTop) <= delta) {
+    return;
+  }
+
+  if (scrollTop > lastScrollTop && lastScrollTop > 0) {
+    nav.style.transition = 'top 0.4s'
+    nav.style.top = "-80px";
+  } else {
+    nav.style.transition = 'top 0.4s'
+    nav.style.top = "0px";
+  }
+  lastScrollTop = scrollTop;
+});
+         </script>
+</body>
+</html>

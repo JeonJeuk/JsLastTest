@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>JavaScript Last Test</title>
+
+</head>
+<body>
+    <nav class="nav hidden-area">
+        <div class="nav-wrapper">
+            <div class="nav-wrapper-container">
+                <div class="nav-left">
+                    <div class="logo">
+                        <h1><a id="logo" href="index.html">Interactive</a></h1>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <ul>
+                        <li><a href="particle.html">RainControl</a></li>
+                        <li><a href="http://localhost:5173/">NoiseSpace</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="preloader shown-area">
+        <button class="preloader-btn">
+            <span class="preloader-btn-hold">Hold</span>
+        </button>
+    </section>
+    <!-- 마우스 포인터 위치에 따른 오브젝트 이동 -->
+    <section class="header hidden-area">
+        <span class="circle" id="circle-1"></span>
+        <span class="circle" id="circle-2"></span>
+
+        <img id="header-image-1" src="./image/I.png" class="header-image">
+        <img id="header-image-2" src="./image/n.png" class="header-image">
+        <img id="header-image-3" src="./image/T.png" class="header-image">
+        <img id="header-image-4" src="./image/e.png" class="header-image">
+        <img id="header-image-5" src="./image/r.png" class="header-image">
+        <img id="header-image-6" src="./image/a.png" class="header-image">
+        <img id="header-image-7" src="./image/c.png" class="header-image">
+        <img id="header-image-8" src="./image/t2.png" class="header-image">
+        <img id="header-image-9" src="./image/i2.png" class="header-image">
+        <img id="header-image-10" src="./image/v.png" class="header-image">
+        <img id="header-image-11" src="./image/e2.png" class="header-image">
+
+
+        <h1 class="header-title">
+            <div>마우스를</div>
+            <div>움직이세요</div>
+        </h1>
+    </section>
+
+    <!-- <section class="poster hidden-area">
+        <div class="poster-parallax">
+            <div class="poster-image-wrapper" id="poster-image-wrapper-1">
+                <img id="poster-image-1" src="./image/santa_flying.png" alt="" class="poster-image">
+            </div>
+            <div class="poster-image-wrapper" id="poster-image-wrapper-2">
+                <img id="poster-image-2" src="./image/santa_flying.png" alt="" class="poster-image">
+            </div>
+            <div class="poster-image-wrapper" id="poster-image-wrapper-3">
+                <img id="poster-image-3" src="./image/santa_flying.png" alt="" class="poster-image">
+            </div>
+        </div>
+    </section> -->
+
+    <!-- 스크롤에 반응하여 색깔이 변하는 코드 -->
+    <div id="intro-main" class="hidden-area">
+        <p>웹사이트라는 것은</p>
+        <p>움직여야 한다.</p>
+        <p id="join-us-text">Scroll Down!</p>
+        <img id="down-arrow-icon" src="./image/down-arrow.png" alt="down arrow icon">
+      </div>
+    <ul id="list-item-wrapper" class="hidden-area">
+        <li class="list-item">인터렉티브한</li>
+        <li class="list-item">웹사이트를</li>
+        <li class="list-item">만들고싶었습니다</li>
+        <li class="list-item">자바스크립트도</li>
+        <li class="list-item">사용하고</li>
+        <li class="list-item">캔버스도</li>
+        <li class="list-item">사용하고</li>
+        <li class="list-item">쓰리제이에스도</li>
+        <li class="list-item">사용했지만</li>
+        <li class="list-item">오류로인해</li>
+        <li class="list-item">스트레스를</li>
+        <li class="list-item">많이받았습니다</li>
+        <li class="list-item">인터렉티브한</li>
+        <li class="list-item">웹사이트를</li>
+        <li class="list-item">만들고싶었습니다</li>
+        <li class="list-item">자바스크립트도</li>
+        <li class="list-item">사용하고</li>
+        <li class="list-item">캔버스도</li>
+        <li class="list-item">사용하고</li>
+        <li class="list-item">쓰리제이에스도</li>
+        <li class="list-item">사용했지만</li>
+        <li class="list-item">오류로인해</li>
+        <li class="list-item">스트레스를</li>
+        <li class="list-item">많이받았습니다</li>
+        <li class="list-item">인터렉티브한</li>
+        <li class="list-item">웹사이트를</li>
+        <li class="list-item">만들고싶었습니다</li>
+        <li class="list-item">자바스크립트도</li>
+        <li class="list-item">사용하고</li>
+        <li class="list-item">캔버스도</li>
+        <li class="list-item">사용하고</li>
+        <li class="list-item">쓰리제이에스도</li>
+        <li class="list-item">사용했지만</li>
+        <li class="list-item">오류로인해</li>
+        <li class="list-item">스트레스를</li>
+        <li class="list-item">많이받았습니다</li>
+        <li class="list-item">인터렉티브한</li>
+        <li class="list-item">웹사이트를</li>
+        <li class="list-item">만들고싶었습니다</li>
+        <li class="list-item">자바스크립트도</li>
+        <li class="list-item">사용하고</li>
+        <li class="list-item">캔버스도</li>
+        <li class="list-item">사용하고</li>
+        <li class="list-item">쓰리제이에스도</li>
+        <li class="list-item">사용했지만</li>
+        <li class="list-item">오류로인해</li>
+        <li class="list-item">스트레스를</li>
+        <li class="list-item">많이받았습니다</li>
+        <li class="list-item">인터렉티브한</li>
+        <li class="list-item">웹사이트를</li>
+        <li class="list-item">만들고싶었습니다</li>
+        <li class="list-item">자바스크립트도</li>
+        <li class="list-item">사용하고</li>
+        <li class="list-item">캔버스도</li>
+        <li class="list-item">사용하고</li>
+        <li class="list-item">쓰리제이에스도</li>
+        <li class="list-item">사용했지만</li>
+        <li class="list-item">오류로인해</li>
+        <li class="list-item">스트레스를</li>
+        <li class="list-item">많이받았습니다</li>
+    </ul>
+
+    <!-- 스크롤에 반응하여 이미지가 움직이는 코드 -->
+    <main>
+        <section id="panel1-img" class="hidden-area">
+            <!-- <img id="flying-santa-img" src="./image/santa_flying.png" alt=""> -->
+        </section>
+    </main>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
